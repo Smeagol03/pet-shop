@@ -4,13 +4,13 @@ export const siteMetadata = {
   title: "Paws & Tails - Klinik & Pet Shop Terpercaya #1",
   description:
     "Pusat perawatan hewan peliharaan terpadu. Memberikan kasih sayang dan layanan medis terbaik untuk anjing dan kucing kesayangan Anda dari grooming profesional hingga makanan berkualitas.",
-  siteUrl: "https://paws-tails-petshop.com", // Ganti dengan URL asli website Anda jika sudah online
+  siteUrl: "https://pet-shop-alpiant.vercel.app/", // Ganti dengan URL asli website Anda jika sudah online
   siteName: "Paws & Tails",
   authors: [{ name: "Alpian Tabrani" }],
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://paws-tails-petshop.com",
+    url: "https://pet-shop-alpiant.vercel.app/",
     siteName: "Paws & Tails",
     images: [
       {
@@ -41,8 +41,10 @@ export function constructMetadata({
   noIndex?: boolean;
 } = {}): Metadata {
   return {
+    metadataBase: new URL(siteMetadata.siteUrl),
     title,
     description,
+    manifest: "/manifest.json",
     authors: siteMetadata.authors,
     openGraph: {
       ...siteMetadata.openGraph,
@@ -71,3 +73,9 @@ export function constructMetadata({
     }),
   };
 }
+
+export const viewport = {
+  themeColor: "#14b8a6",
+  width: "device-width",
+  initialScale: 1,
+};

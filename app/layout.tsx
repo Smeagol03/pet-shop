@@ -12,9 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import { constructMetadata } from "@/lib/seo";
+import { constructMetadata, viewport } from "@/lib/seo";
+import InstallPWA from "@/components/InstallPWA";
 
 export const metadata: Metadata = constructMetadata();
+export { viewport };
 
 export default function RootLayout({
   children,
@@ -22,11 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <InstallPWA />
       </body>
     </html>
   );
