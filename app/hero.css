@@ -1,0 +1,79 @@
+/* Background Animasi Menyenangkan untuk Hero Section */
+.hero-container {
+  position: relative;
+  background-color: #f0fdfa; /* Teal 50 */
+  overflow: hidden;
+}
+
+/* Pola Paw Prints Floating */
+.hero-paw-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-5 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-5 4c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z' fill='%3C%20teal-500%27/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+/* Lingkaran Dekoratif Bergerak */
+.hero-blob {
+  position: absolute;
+  filter: blur(60px);
+  border-radius: 50%;
+  z-index: 0;
+  animation: blob-float 10s infinite alternate ease-in-out;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background-color: #99f6e4; /* Teal 200 */
+  top: -100px;
+  right: -50px;
+  opacity: 0.6;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background-color: #fed7aa; /* Orange 200 */
+  bottom: -50px;
+  left: -50px;
+  opacity: 0.5;
+  animation-delay: -5s;
+}
+
+@keyframes blob-float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  100% {
+    transform: translate(-10px, 20px) scale(0.9);
+  }
+}
+
+/* Animasi mengambang untuk elemen kecil */
+.floating-element {
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Hover effect untuk gambar hero */
+.image-backdrop {
+  background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%);
+  border-radius: 50%;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hero-container:hover .image-backdrop {
+  transform: scale(1.05) rotate(3deg);
+}

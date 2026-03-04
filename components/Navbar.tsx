@@ -48,20 +48,20 @@ export default function Navbar() {
               <Dog size={24} />
             </div>
             <span
-              className={`text-2xl font-bold tracking-tight ${isScrolled ? "text-slate-900" : "text-slate-900 lg:text-slate-800"}`}
+              className={`text-xl md:text-2xl font-bold tracking-tight ${isScrolled ? "text-slate-900" : "text-slate-900 lg:text-slate-800"}`}
             >
               Paws<span className="text-teal-500">&</span>Tails
             </span>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center md:space-x-4 lg:space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`font-medium hover:text-teal-500 transition-colors ${
+                className={`font-medium md:text-sm lg:text-base hover:text-teal-500 transition-colors ${
                   isScrolled ? "text-slate-600" : "text-slate-700"
                 }`}
               >
@@ -71,9 +71,9 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, "contact")}
-              className="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-teal-500/30 flex items-center gap-2"
+              className="bg-teal-500 hover:bg-teal-600 text-white md:px-4 md:py-2 lg:px-5 lg:py-2.5 rounded-full md:text-sm lg:text-base font-medium transition-all shadow-lg shadow-teal-500/30 flex items-center gap-2"
             >
-              <Phone size={18} />
+              <Phone size={18} className="hidden lg:block" />
               Hubungi Kami
             </a>
           </div>
