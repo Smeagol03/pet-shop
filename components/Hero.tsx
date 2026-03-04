@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
+      className="relative pt-24 pb-16 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         {/* Background pattern/blobs */}
@@ -19,25 +19,28 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-600 font-semibold text-sm mb-6">
+          <div className="text-center lg:text-left mt-8 md:mt-0">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-orange-100 text-orange-600 font-semibold text-xs md:text-sm mb-4 md:mb-6">
               <Star size={16} className="fill-current" />
               <span>Klinik & Pet Shop Terpercaya #1</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-4 md:mb-6">
               Perawatan Terbaik untuk{" "}
-              <span className="text-teal-500">Sahabat Berbulu</span> Anda.
+              <span className="text-teal-500 block sm:inline">
+                Sahabat Berbulu
+              </span>{" "}
+              Anda.
             </h1>
-            <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base md:text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 px-2 sm:px-0">
               Dari layanan grooming profesional, klinik kesehatan, hingga
               makanan berkualitas tinggi. Kami memastikan hewan peliharaan Anda
               selalu sehat dan bahagia.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start px-4 sm:px-0">
               <a
                 href="#services"
                 onClick={(e) => scrollToSection(e, "services")}
-                className="bg-teal-500 hover:bg-teal-600 text-sm text-white px-8 py-4 rounded-full font-bold transition-all shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 group"
+                className="bg-teal-500 hover:bg-teal-600 text-sm text-white px-6 py-3.5 md:px-8 md:py-4 rounded-full font-bold transition-all shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 group w-full sm:w-auto"
               >
                 Lihat Layanan
                 <ChevronRight
@@ -49,7 +52,7 @@ export default function Hero() {
                 href={getWhatsAppUrl(WA_MESSAGES.konsultasi)}
                 target="_blank"
                 rel="noreferrer"
-                className="bg-white hover:bg-slate-50 text-slate-800 text-sm border-2 border-slate-200 px-8 py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2"
+                className="bg-white hover:bg-slate-50 text-slate-800 text-sm border-2 border-slate-200 px-6 py-3.5 md:px-8 md:py-4 rounded-full font-bold transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
               >
                 <Phone size={20} className="text-teal-500" />
                 Konsultasi Gratis

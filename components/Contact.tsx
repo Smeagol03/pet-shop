@@ -26,7 +26,7 @@ export default function Contact() {
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg shadow-teal-500/50"
             >
-              <Phone size={24} />
+              <Phone size={24} className="hidden md:block" />
               Chat WhatsApp Sekarang
             </a>
           </div>
